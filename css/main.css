@@ -125,6 +125,14 @@ body, html {
 	-webkit-animation: k-glow 1.8s ease-in-out infinite;
 }
 
+.showcase-carousel .swiper-wrapper {
+	transition: var(--transition);
+	-webkit-transition: var(--transition);
+	-moz-transition: var(--transition);
+	-ms-transition: var(--transition);
+	-o-transition: var(--transition);
+}
+
 .showcase-carousel__item {
 	position: relative;
 	height: calc(100vh - var(--padding)*2);
@@ -209,6 +217,68 @@ body, html {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+/* NAVIGATION */
+
+.showcase-navigation {
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.showcase-navigation > * {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	outline: none;
+	cursor: pointer;
+}
+
+.showcase-navigation > *::before {
+	content: '?';
+	font-family: assassin-st;
+	opacity: 0;
+	transition: opacity .75s ease-out;
+	-webkit-transition: opacity .75s ease-out;
+	-moz-transition: opacity .75s ease-out;
+	-ms-transition: opacity .75s ease-out;
+	-o-transition: opacity .75s ease-out;
+	position: absolute;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	left: 50px;
+	top: 50%;
+	font-size: 45px;
+}
+
+.showcase-navigation > *:hover::before {
+	opacity: .25;
+}
+
+.showcase-navigation__next {
+	right: 0;
+}
+
+.showcase-navigation__next::before {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	right: 50px;
+	left: auto;
+}
+
+.showcase-navigation > *.swiper-button-disabled {
+	display: none;
 }
 
 /* ANIMATIONS */
