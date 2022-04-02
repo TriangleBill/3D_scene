@@ -78,6 +78,21 @@ body, html {
 	-webkit-animation: k-light 3s ease-in-out infinite;
 }
 
+.showcase__header {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+	top: 40px;
+	font-family: assassin-st, sans-serif;
+	font-size: 32px;
+	color: rgba(255, 255, 255, .75);
+}
+
+.showcase__header span {
+	color: var(--accent)
+}
+
 .showcase__video {
 	position: absolute;
 	top: 0;
